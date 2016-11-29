@@ -1,68 +1,61 @@
-var board = []
-var playerXTurn = true
-
-var createGame = function() {
-
-  board = [['-','-','-'],['-','-','-'],['-','-','-']]
+var ttt = function() {
+  this.board = [['-','-','-'],['-','-','-'],['-','-','-']]
+  this.playerXTurn = true
   console.log('player X turn')
 }
 
-var addMove = function(row, column) {
+ttt.prototype.addMove = function(row, column) {
 
-
-  if (playerXTurn) {
-    board[row][column] = 'X'
-    playerXTurn = !playerXTurn
-    checkWin()
+  if (this.playerXTurn) {
+    this.board[row][column] = 'X'
+    this.playerXTurn = !this.playerXTurn
+    this.checkWin()
     console.log('Player O turn')
   } else {
-    board[row][column] = 'O'
-    playerXTurn = !playerXTurn
-    checkWin()
+    this.board[row][column] = 'O'
+    this.playerXTurn = !this.playerXTurn
+    this.checkWin()
     console.log('Player X turn')
   }
 
-  console.log(board.join('\n'))
+  console.log(this.board.join('\n'))
 } 
 
-var checkWin = function() {
-  if (board[0][0] === 'X' &&
-      board[0][1] === 'X' &&
-      board[0][2] === 'X' ) {
+ttt.prototype.checkWin = function() {
+  if (this.board[0][0] === 'X' &&
+      this.board[0][1] === 'X' &&
+      this.board[0][2] === 'X' ) {
     console.log('Player X wins!')
   }
 
-  if (board[1][0] === 'X' &&
-      board[1][1] === 'X' &&
-      board[1][2] === 'X' ) {
+  if (this.board[1][0] === 'X' &&
+      this.board[1][1] === 'X' &&
+      this.board[1][2] === 'X' ) {
     console.log('Player X wins!')
   }
 
-  if (board[2][0] === 'X' &&
-      board[2][1] === 'X' &&
-      board[2][2] === 'X' ) {
+  if (this.board[2][0] === 'X' &&
+      this.board[2][1] === 'X' &&
+      this.board[2][2] === 'X' ) {
     console.log('Player X wins!')
   }
 
-  if (board[0][0] === 'O' &&
-      board[0][1] === 'O' &&
-      board[0][2] === 'O' ) {
+  if (this.board[0][0] === 'O' &&
+      this.board[0][1] === 'O' &&
+      this.board[0][2] === 'O' ) {
     console.log('Player O wins!')
   }
 
-  if (board[1][0] === 'O' &&
-      board[1][1] === 'O' &&
-      board[1][2] === 'O' ) {
+  if (this.board[1][0] === 'O' &&
+      this.board[1][1] === 'O' &&
+      this.board[1][2] === 'O' ) {
     console.log('Player O wins!')
   }
 
-  if (board[2][0] === 'O' &&
-      board[2][1] === 'O' &&
-      board[2][2] === 'O' ) {
+  if (this.board[2][0] === 'O' &&
+      this.board[2][1] === 'O' &&
+      this.board[2][2] === 'O' ) {
     console.log('Player O wins!')
   }
-
-  if (board[0][1] === 'X' &&)
-
 
 }

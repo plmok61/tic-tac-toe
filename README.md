@@ -1,1 +1,1 @@
-# tic-tac-toe
+To start a new game type ``

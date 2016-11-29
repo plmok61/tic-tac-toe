@@ -58,4 +58,64 @@ ttt.prototype.checkWin = function() {
     console.log('Player O wins!')
   }
 
+  if (this.board[0][0] === 'O' &&
+      this.board[1][0] === 'O' &&
+      this.board[2][0] === 'O' ) {
+    console.log('Player O wins!')
+  }
+
+  if (this.board[0][1] === 'O' &&
+      this.board[1][1] === 'O' &&
+      this.board[2][1] === 'O' ) {
+    console.log('Player O wins!')
+  }
+
+  if (this.board[0][2] === 'O' &&
+      this.board[1][2] === 'O' &&
+      this.board[2][2] === 'O' ) {
+    console.log('Player O wins!')
+  }
+
+  if (this.board[0][0] === 'X' &&
+      this.board[1][0] === 'X' &&
+      this.board[2][0] === 'X' ) {
+    console.log('Player O wins!')
+  }
+
+  if (this.board[0][1] === 'X' &&
+      this.board[1][1] === 'X' &&
+      this.board[2][1] === 'X' ) {
+    console.log('Player X wins!')
+  }
+
+  if (this.board[0][2] === 'X' &&
+      this.board[1][2] === 'X' &&
+      this.board[2][2] === 'X' ) {
+    console.log('Player X wins!')
+  }
+
+  if (this.board[0][0] === 'X' &&
+      this.board[1][1] === 'X' &&
+      this.board[2][2] === 'X' ) {
+    console.log('Player X wins!')
+  }
+
+  if (this.board[2][2] === 'X' &&
+      this.board[1][1] === 'X' &&
+      this.board[0][0] === 'X' ) {
+    console.log('Player X wins!')
+  }
+
+  if (this.board[0][0] === 'O' &&
+      this.board[1][1] === 'O' &&
+      this.board[2][2] === 'O' ) {
+    console.log('Player O wins!')
+  }
+
+  if (this.board[2][2] === 'O' &&
+      this.board[1][1] === 'O' &&
+      this.board[0][0] === 'O' ) {
+    console.log('Player O wins!')
+  }
+
 }
